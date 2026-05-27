@@ -4,6 +4,7 @@ import TrustedBy from './components/TrustedBy';
 import SolutionsSection from './components/SolutionsSection';
 import './App.css';
 import BankingSection from './components/BankingSection';
+import DigitalSection from './components/DigitalSection';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <TrustedBy />
         <SolutionsSection />
         <BankingSection />
+        <DigitalSection />
       </main>
     </>
   );
