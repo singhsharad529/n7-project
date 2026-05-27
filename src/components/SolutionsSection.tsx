@@ -60,7 +60,7 @@ const cardVariants = {
     transition: {
       duration: 0.6,
       delay: i * 0.1,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   }),
 };
@@ -70,7 +70,7 @@ const headingVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -140,9 +140,7 @@ export default function SolutionsSection() {
             viewport={{ once: true }}
           >
             <h2 className="font-heading text-[clamp(1.75rem,3vw,2.25rem)] font-semibold leading-1.2 tracking-[-0.02em] text-n7-text mb-8">
-              All of our solutions are
-              <br />
-              tailor-made to your needs
+              All of our solutions are tailor-made to your needs
             </h2>
 
             <motion.a

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import heroLeft from '../assets/hero-left.png';
-import heroMiddle from '../assets/hero-middle.png';
-import heroRight from '../assets/hero-right.png';
+import heroLeft from '../assets/images/hero/hero-left.png';
+import heroMiddle from '../assets/images/hero/hero-middle.png';
+import heroRight from '../assets/images/hero/hero-right.png';
 
 export default function HeroSection() {
   return (

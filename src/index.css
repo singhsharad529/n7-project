@@ -316,6 +316,7 @@ body {
   color: var(--color-n7-accent);
 }
 
+
 /* Mobile variant for primary buttons used in hero */
 @media (max-width: 1004px) {
   .btn-outline {

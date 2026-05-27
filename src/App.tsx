@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import TrustedBy from './components/TrustedBy';
 import SolutionsSection from './components/SolutionsSection';
 import './App.css';
+import BankingSection from './components/BankingSection';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <HeroSection />
         <TrustedBy />
         <SolutionsSection />
+        <BankingSection />
       </main>
     </>
   );
