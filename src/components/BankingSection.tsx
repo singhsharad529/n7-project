@@ -3,7 +3,6 @@ import bankingImage1 from '../assets/banking/image 3.png';
 import bankingImage2 from '../assets/banking/Mask group.png';
 
 import "../assets/css/banking-style.css";
-import { ArrowRight } from 'lucide-react';
 import LearnMore from './common/LearnMore';
 
 const headingVariants = {
@@ -112,6 +111,38 @@ export default function BankingSection() {
                     </motion.div>
 
 
+                </div>
+
+                <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[440px_1fr] gap-12 lg:gap-[60px] justify-between items-center bg-[#031E2A] p-8 rounded-2xl relative overflow-hidden">
+                    {/* Left: Heading + CTA (sticky on desktop) */}
+                    <span className="absolute inset-0 flex justify-center font-heading text-[24rem] leading-[0.9] tracking-[-0.08em] text-transparent pointer-events-none z-0 banking-watermark-stripe">
+                        CB7
+                    </span>
+                    <motion.div
+                        className="solutions-heading relative z-10 text-center lg:text-left"
+                        variants={headingVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="font-heading text-[clamp(1.75rem,3vw,2.25rem)] font-semibold leading-1.2 tracking-[-0.02em] text-n7-text mb-8">
+                            Take the full advantage of going paper-less now.
+                        </h2>
+                        <p>CB7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations </p>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                        className="relative z-10 flex items-center gap-4 flex-wrap justify-center"
+                    >
+                        <a href="#contact" className="btn-outline" id="hero-cta-contact">
+                            Contact Us
+                        </a>
+                        <a href="#request-demo" className="btn-primary btn-primary-sm" id="hero-cta-demo">
+                            Request Demo
+                        </a>
+                    </motion.div>
                 </div>
             </div>
         </section>

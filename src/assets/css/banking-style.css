@@ -36,6 +36,14 @@
     z-index: 1;
 }
 
+.banking-watermark-stripe {
+    -webkit-text-stroke: 1px #003ACE;
+    text-stroke: 1px #003ACE;
+    opacity: 2;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+}
+
 @media (max-width: 1023px) {
 
     .banking-image-wrapper {

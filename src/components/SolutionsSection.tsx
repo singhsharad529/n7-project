@@ -5,7 +5,6 @@ import {
   Globe,
   FileText,
   BarChart3,
-  ArrowRight,
 } from 'lucide-react';
 import LearnMore from './common/LearnMore';
 
