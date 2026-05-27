@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background gradient effect */}
       <div className="hero-gradient absolute inset-0 z-0" />
       <div
-        className="hero-grid relative z-10 max-w-[1240px] mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] items-center gap-10 md:gap-2 text-center md:text-left pt-10 md:pt-0"
+        className="relative z-10 max-w-[1240px] mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] items-center gap-10 md:gap-2 text-center md:text-left pt-10 md:pt-0"
       >
         {/* Left: Text content */}
         <div className="flex flex-col items-center md:items-start gap-y-5 md:gap-y-6">
@@ -42,7 +42,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="flex items-center gap-4 flex-wrap justify-center md:justify-start"
           >
-            <a href="#request-demo" className="btn-primary" id="hero-cta-demo">
+            <a href="#request-demo" className="btn-primary btn-primary-sm" id="hero-cta-demo">
               Request Demo
             </a>
             <a href="#contact" className="btn-outline" id="hero-cta-contact">
@@ -52,7 +52,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right: Image composition */}
-        <div className="hero-image-area flex justify-center items-center order-first md:order-none">
+        <div className="hero-image-area hidden md:flex justify-center items-center order-first md:order-none">
           <div className="hero-image-group max-w-[300px] min-[481px]:max-w-[400px] md:max-w-[480px] mx-auto">
             {/* Background glow behind images */}
             <div className="hero-image-glow" />

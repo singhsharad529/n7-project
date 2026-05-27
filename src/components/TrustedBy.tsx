@@ -13,15 +13,15 @@ export default function TrustedBy() {
   return (
     <section
       id="trusted-by"
-      className="relative z-10 py-12 border-t border-b border-n7-border bg-n7-bg"
+      className="relative z-10 w-full py-12 border-t border-b border-n7-border bg-n7-bg"
     >
-      <div className="max-w-[1240px] mx-auto px-8">
+      <div className="max-w-[1240px] mx-auto px-8 w-full">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-[0.8125rem] font-medium text-n7-text-muted mb-6 tracking-[0.02em]"
+          className="text-[1rem] font-medium text-n7-text-muted mb-6 tracking-[0.02em]"
         >
           Trusted By:
         </motion.p>

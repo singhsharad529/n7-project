@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <a
             href="#request-demo"
-            className="btn-outline text-[0.75rem] hidden md:inline-flex border border-n7-light"
+            className="btn-outline text-[0.75rem] hidden md:inline-flex border border-n7-light btn-primary-sm"
           >
             Request Demo
           </a>
@@ -104,7 +104,14 @@ export default function Navbar() {
               transition={{ type: 'spring', damping: 26, stiffness: 220 }}
               className="fixed top-0 right-0 w-[min(320px,85vw)] h-full bg-n7-bg-light border-l border-n7-border z-100 p-6 flex flex-col"
             >
-              <div className="mt-[72px] flex flex-col">
+              <a
+                href="/"
+                id="nav-logo"
+                className="flex items-center gap-[2px] no-underline font-heading text-2xl font-bold text-n7-text tracking-[-0.02em]"
+              >
+                <span>N7</span>
+              </a>
+              <div className="mt-4 flex flex-col">
                 {navLinks.map((link, i) => (
                   <motion.a
                     key={link.label}

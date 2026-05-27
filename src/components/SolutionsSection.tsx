@@ -130,7 +130,7 @@ export default function SolutionsSection() {
       className="pt-[100px] pb-20 bg-n7-bg relative"
     >
       <div className="max-w-[1240px] mx-auto px-8">
-        <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-12 lg:gap-[60px] items-start">
+        <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[440px_1fr] gap-12 lg:gap-[60px] items-start">
           {/* Left: Heading + CTA (sticky on desktop) */}
           <motion.div
             className="solutions-heading lg:sticky lg:top-[120px] text-center lg:text-left"

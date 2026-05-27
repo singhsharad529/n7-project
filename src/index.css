@@ -23,11 +23,6 @@
 }
 
 /* ── Base resets ───────────────────────────────────────────── */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 html {
   scroll-behavior: smooth;
@@ -285,7 +280,7 @@ body {
   position: absolute;
   width: 50%;
   bottom: 24%;
-  left: 0;
+  left: -10%;
   z-index: 2;
   border-radius: 16px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
@@ -319,4 +314,12 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-n7-accent);
+}
+
+/* Mobile variant for primary buttons used in hero */
+@media (max-width: 1004px) {
+  .btn-outline {
+    padding: 12px 24px;
+    font-size: 0.6875rem;
+  }
 }
