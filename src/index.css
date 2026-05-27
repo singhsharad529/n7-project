@@ -46,9 +46,11 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-n7-bg);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-n7-border-light);
   border-radius: 3px;
@@ -56,12 +58,10 @@ body {
 
 /* ── Hero gradient overlay ────────────────────────────────── */
 .hero-gradient {
-  background: radial-gradient(
-    ellipse 80% 60% at 70% 40%,
-    rgba(0, 180, 253, 0.06) 0%,
-    rgba(0, 58, 206, 0.03) 40%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse 80% 60% at 70% 40%,
+      rgba(0, 180, 253, 0.06) 0%,
+      rgba(0, 58, 206, 0.03) 40%,
+      transparent 70%);
 }
 
 /* ── Button styles ────────────────────────────────────────── */
@@ -90,7 +90,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -209,16 +209,18 @@ body {
 .hero-heading {
   font-family: var(--font-heading);
   font-weight: 500;
-  font-size: clamp(2rem, 7vw, 4.1875rem); /* scales up to 67px */
-  line-height: 1.2; /* 120% */
-  letter-spacing: -0.01em; /* -1% */
+  font-size: clamp(2rem, 7vw, 4.1875rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .hero-subheading {
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 1rem; /* 16px */
-  line-height: 1.3; /* 130% */
+  font-size: 1rem;
+  /* 16px */
+  line-height: 1.3;
+  /* 130% */
   letter-spacing: 0;
 }
 
@@ -240,26 +242,28 @@ body {
   top: 10%;
   left: 12%;
   z-index: 1;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 32px;
+  box-shadow:
+    0 0 55px rgba(0, 180, 253, 0.45),
+    0 0 95px rgba(0, 58, 206, 0.18),
+    0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 /* The Toni Kroos card (top-right foreground) */
 .hero-img-right {
   position: absolute;
-  width: 46%;
-  top: 0;
-  right: 0;
+  width: 54%;
+  top: 10%;
+  right: -16%;
   z-index: 3;
   border-radius: 16px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
 /* The Recent Activity card (bottom-left foreground) */
 .hero-img-left {
   position: absolute;
   width: 50%;
-  bottom: 0;
+  bottom: 24%;
   left: 0;
   z-index: 2;
   border-radius: 16px;

@@ -13,46 +13,22 @@ export default function TrustedBy() {
   return (
     <section
       id="trusted-by"
-      style={{
-        position: 'relative',
-        zIndex: 1,
-        padding: '48px 0',
-        borderTop: '1px solid var(--color-n7-border)',
-        borderBottom: '1px solid var(--color-n7-border)',
-        background: 'var(--color-n7-bg)',
-      }}
+      className="relative z-10 py-12 border-t border-b border-n7-border bg-n7-bg"
     >
-      <div
-        style={{
-          maxWidth: '1240px',
-          margin: '0 auto',
-          padding: '0 32px',
-        }}
-      >
+      <div className="max-w-[1240px] mx-auto px-8">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          style={{
-            fontSize: '0.8125rem',
-            fontWeight: 500,
-            color: 'var(--color-n7-text-muted)',
-            marginBottom: '24px',
-            letterSpacing: '0.02em',
-          }}
+          className="text-[0.8125rem] font-medium text-n7-text-muted mb-6 tracking-[0.02em]"
         >
           Trusted By:
         </motion.p>
 
         {/* Logo strip – infinite scroll */}
         <div
-          style={{
-            overflow: 'hidden',
-            position: 'relative',
-            maskImage: 'linear-gradient(90deg, transparent, black 5%, black 95%, transparent)',
-            WebkitMaskImage: 'linear-gradient(90deg, transparent, black 5%, black 95%, transparent)',
-          }}
+          className="overflow-hidden relative [mask-image:linear-gradient(90deg,transparent,black_5%,black_95%,transparent)] [webkit-mask-image:linear-gradient(90deg,transparent,black_5%,black_95%,transparent)]"
         >
           <motion.div
             animate={{ x: ['0%', '-50%'] }}
@@ -64,17 +40,12 @@ export default function TrustedBy() {
                 ease: 'linear',
               },
             }}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '48px',
-              width: 'max-content',
-            }}
+            className="flex items-center gap-12 w-max"
           >
             {/* Double the logos for seamless loop */}
             {[...logos, ...logos].map((logo, i) => (
               <div key={i} className="trusted-logo">
-                <span style={{ fontSize: '1rem', lineHeight: 1 }}>{logo.icon}</span>
+                <span className="text-base leading-none">{logo.icon}</span>
                 <span>{logo.name}</span>
               </div>
             ))}

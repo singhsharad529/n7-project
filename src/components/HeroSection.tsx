@@ -6,60 +6,20 @@ import heroRight from '../assets/hero-right.png';
 export default function HeroSection() {
   return (
     <section
-      id="hero"
-      style={{
-        position: 'relative',
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        paddingTop: '72px',
-        overflow: 'hidden',
-      }}
+      className="relative min-h-screen flex items-center justify-center pt-[72px] overflow-hidden"
     >
       {/* Background gradient effect */}
-      <div className="hero-gradient" style={{ position: 'absolute', inset: 0, zIndex: 0 }} />
-
-      {/* Subtle grid pattern */}
+      <div className="hero-gradient absolute inset-0 z-0" />
       <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(rgba(26, 24, 37, 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(26, 24, 37, 0.3) 1px, transparent 1px)
-          `,
-          backgroundSize: '64px 64px',
-          opacity: 0.4,
-          zIndex: 0,
-        }}
-      />
-
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          maxWidth: '1240px',
-          margin: '0 auto',
-          padding: '0 32px',
-          width: '100%',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          alignItems: 'center',
-          gap: '48px',
-        }}
-        className="hero-grid"
+        className="hero-grid relative z-10 max-w-[1240px] mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] items-center gap-10 md:gap-2 text-center md:text-left pt-10 md:pt-0"
       >
         {/* Left: Text content */}
-        <div className="hero-text">
+        <div className="flex flex-col items-center md:items-start gap-y-5 md:gap-y-6">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="hero-heading"
-            style={{
-              color: 'var(--color-n7-text)',
-              marginBottom: '20px',
-            }}
           >
             The new foundation
             <br />
@@ -70,12 +30,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="hero-subheading"
-            style={{
-              color: 'var(--color-n7-text-muted)',
-              maxWidth: '460px',
-              marginBottom: '36px',
-            }}
+            className="hero-subheading text-n7-text-muted max-w-[460px]"
           >
             We drive innovation and growth, provide seamless
             customer experience and operational excellence
@@ -85,12 +40,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '16px',
-              flexWrap: 'wrap',
-            }}
+            className="flex items-center gap-4 flex-wrap justify-center md:justify-start"
           >
             <a href="#request-demo" className="btn-primary" id="hero-cta-demo">
               Request Demo
@@ -102,15 +52,8 @@ export default function HeroSection() {
         </div>
 
         {/* Right: Image composition */}
-        <div
-          className="hero-image-area"
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <div className="hero-image-group">
+        <div className="hero-image-area flex justify-center items-center order-first md:order-none">
+          <div className="hero-image-group max-w-[300px] min-[481px]:max-w-[400px] md:max-w-[480px] mx-auto">
             {/* Background glow behind images */}
             <div className="hero-image-glow" />
 
@@ -147,36 +90,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* Responsive overrides */}
-      <style>{`
-        @media (max-width: 960px) {
-          .hero-grid {
-            grid-template-columns: 1fr !important;
-            text-align: center;
-            gap: 40px !important;
-            padding-top: 40px !important;
-          }
-          .hero-text p {
-            margin-left: auto !important;
-            margin-right: auto !important;
-          }
-          .hero-text > div:last-child {
-            justify-content: center !important;
-          }
-          .hero-image-area {
-            order: -1;
-          }
-          .hero-image-group {
-            max-width: 400px !important;
-          }
-        }
-        @media (max-width: 480px) {
-          .hero-image-group {
-            max-width: 300px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

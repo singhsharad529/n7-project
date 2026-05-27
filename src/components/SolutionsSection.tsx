@@ -87,25 +87,11 @@ function SolutionCard({ item, index }: { item: SolutionItem; index: number }) {
       custom={index}
     >
       {/* Icon + badge row */}
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginBottom: '16px',
-        }}
-      >
+      <div className="flex items-center justify-between mb-4">
         <motion.div
           whileHover={{ scale: 1.1, rotate: 3 }}
           transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-          style={{
-            width: '48px',
-            height: '48px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'var(--color-n7-text-muted)',
-          }}
+          className="w-12 h-12 flex items-center justify-center text-n7-text-muted"
         >
           {item.icon}
         </motion.div>
@@ -113,28 +99,12 @@ function SolutionCard({ item, index }: { item: SolutionItem; index: number }) {
       </div>
 
       {/* Title */}
-      <h3
-        style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: '1.15rem',
-          fontWeight: 600,
-          color: 'var(--color-n7-text)',
-          marginBottom: '12px',
-          letterSpacing: '-0.01em',
-        }}
-      >
+      <h3 className="font-heading text-[1.15rem] font-semibold text-n7-text mb-3 tracking-[-0.01em]">
         {item.title}
       </h3>
 
       {/* Description */}
-      <p
-        style={{
-          fontSize: '0.875rem',
-          lineHeight: 1.7,
-          color: 'var(--color-n7-text-muted)',
-          marginBottom: '20px',
-        }}
-      >
+      <p className="text-sm leading-[1.7] text-n7-text-muted mb-5">
         {item.description}
       </p>
 
@@ -157,51 +127,19 @@ export default function SolutionsSection() {
   return (
     <section
       id="solutions"
-      style={{
-        padding: '100px 0 80px',
-        background: 'var(--color-n7-bg)',
-        position: 'relative',
-      }}
+      className="pt-[100px] pb-20 bg-n7-bg relative"
     >
-      <div
-        style={{
-          maxWidth: '1240px',
-          margin: '0 auto',
-          padding: '0 32px',
-        }}
-      >
-        <div
-          className="solutions-layout"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '340px 1fr',
-            gap: '60px',
-            alignItems: 'start',
-          }}
-        >
+      <div className="max-w-[1240px] mx-auto px-8">
+        <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-12 lg:gap-[60px] items-start">
           {/* Left: Heading + CTA (sticky on desktop) */}
           <motion.div
-            className="solutions-heading"
+            className="solutions-heading lg:sticky lg:top-[120px] text-center lg:text-left"
             variants={headingVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            style={{
-              position: 'sticky',
-              top: '120px',
-            }}
           >
-            <h2
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
-                fontWeight: 600,
-                lineHeight: 1.2,
-                letterSpacing: '-0.02em',
-                color: 'var(--color-n7-text)',
-                marginBottom: '32px',
-              }}
-            >
+            <h2 className="font-heading text-[clamp(1.75rem,3vw,2.25rem)] font-semibold leading-1.2 tracking-[-0.02em] text-n7-text mb-8">
               All of our solutions are
               <br />
               tailor-made to your needs
@@ -209,7 +147,7 @@ export default function SolutionsSection() {
 
             <motion.a
               href="#request-demo"
-              className="btn-outline"
+              className="btn-outline mx-auto lg:mx-0 inline-flex"
               id="solutions-cta"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -219,43 +157,13 @@ export default function SolutionsSection() {
           </motion.div>
 
           {/* Right: Solution cards grid */}
-          <div
-            className="solutions-cards-grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '32px 48px',
-            }}
-          >
+          <div className="solutions-cards-grid grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-x-12 sm:gap-y-8">
             {solutions.map((item, i) => (
               <SolutionCard key={i} item={item} index={i} />
             ))}
           </div>
         </div>
       </div>
-
-      {/* Responsive overrides */}
-      <style>{`
-        @media (max-width: 1024px) {
-          .solutions-layout {
-            grid-template-columns: 1fr !important;
-            gap: 48px !important;
-          }
-          .solutions-heading {
-            position: static !important;
-            text-align: center;
-          }
-          .solutions-heading > a {
-            margin: 0 auto;
-          }
-        }
-        @media (max-width: 640px) {
-          .solutions-cards-grid {
-            grid-template-columns: 1fr !important;
-            gap: 24px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }
