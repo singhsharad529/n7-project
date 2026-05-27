@@ -3,6 +3,8 @@ import bankingImage1 from '../assets/banking/image 3.png';
 import bankingImage2 from '../assets/banking/Mask group.png';
 
 import "../assets/css/banking-style.css";
+import { ArrowRight } from 'lucide-react';
+import LearnMore from './common/LearnMore';
 
 const headingVariants = {
     hidden: { opacity: 0, x: -30 },
@@ -41,22 +43,26 @@ export default function BankingSection() {
                 <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[440px_1fr] gap-12 lg:gap-[60px] justify-between items-center">
                     {/* Left: Heading + CTA (sticky on desktop) */}
                     <motion.div
-                        className="solutions-heading text-center lg:text-left"
+                        className="solutions-heading relative overflow-hidden text-center lg:text-left"
                         variants={headingVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
+                        <span className="banking-watermark">CB7</span>
                         <h2 className="font-heading text-[clamp(1.75rem,3vw,2.25rem)] font-semibold leading-1.2 tracking-[-0.02em] text-n7-text mb-8">
                             A complete cloud-based core banking.
-
                         </h2>
                         <p>Faster time to market with our cloud-based core banking services</p>
 
-                        <a href="#request-demo" className="my-4 btn-primary btn-primary-sm" id="hero-cta-demo">
-                            Request Demo
-                        </a>
+                        <div className="mt-8 flex flex-col items-center md:items-start gap-4">
+                            <a href="#request-demo" className="btn-primary btn-primary-sm" id="hero-cta-demo">
+                                Request Demo
+                            </a>
+                            <LearnMore href={"#"} index={0} />
+                        </div>
                     </motion.div>
+
 
                     <div className="banking-image-wrapper">
                         <img

@@ -7,6 +7,7 @@ import {
   BarChart3,
   ArrowRight,
 } from 'lucide-react';
+import LearnMore from './common/LearnMore';
 
 /* ── Solution card data ───────────────────────────────────── */
 interface SolutionItem {
@@ -109,15 +110,7 @@ function SolutionCard({ item, index }: { item: SolutionItem; index: number }) {
       </p>
 
       {/* Learn more */}
-      <motion.a
-        href="#"
-        className="learn-more-link"
-        id={`learn-more-${index}`}
-        whileHover={{ x: 4 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-      >
-        Learn More <ArrowRight size={14} />
-      </motion.a>
+      <LearnMore href={"#"} index={index} />
     </motion.div>
   );
 }

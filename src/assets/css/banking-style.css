@@ -8,7 +8,33 @@
     overflow: visible;
 }
 
+.banking-watermark {
+    position: absolute;
+    top: -10%;
+    left: calc((100vw - min(1240px, 100vw)) / 2 * -1);
+    width: calc((100vw - min(1240px, 100vw)) / 2 + 440px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    font-family: var(--font-heading);
+    font-size: 24rem;
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+    color: transparent;
+    -webkit-text-stroke: 1px #003ACE;
+    text-stroke: 1px #003ACE;
+    opacity: 2;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+}
 
+.solutions-heading>*:not(.banking-watermark) {
+    position: relative;
+    z-index: 1;
+}
 
 @media (max-width: 1023px) {
 

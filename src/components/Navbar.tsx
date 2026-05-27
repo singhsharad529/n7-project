@@ -49,7 +49,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop nav links */}
-          <div className="hidden md:flex items-center gap-9">
+          <div className="hidden lg:flex items-center gap-9">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -75,7 +75,7 @@ export default function Navbar() {
           <button
             id="mobile-menu-toggle"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex md:hidden bg-transparent border-none cursor-pointer p-2 z-[110] text-n7-text"
+            className="flex lg:hidden bg-transparent border-none cursor-pointer p-2 z-[110] text-n7-text"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
