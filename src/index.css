@@ -15,6 +15,7 @@
   --color-n7-accent-hover: #38bdf8;
   --color-n7-accent-glow: rgba(0, 180, 253, 0.2);
   --color-n7-purple: #863bff;
+  --color-n7-navbar: #2F2F2FB2;
 
   --font-sans: 'Archivo', system-ui, -apple-system, sans-serif;
   --font-heading: 'Archivo', system-ui, sans-serif;
@@ -40,6 +41,27 @@ body {
   color: var(--color-n7-text);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* Utility classes used in JSX */
+.bg-n7-navbar {
+  background: var(--color-n7-navbar);
+}
+
+.text-n7-text {
+  color: var(--color-n7-text);
+}
+
+.text-n7-text-muted {
+  color: var(--color-n7-text-muted);
+}
+
+/* Ensure navbar content is white when using the navbar background */
+.bg-n7-navbar .nav-link,
+.bg-n7-navbar #nav-logo,
+.bg-n7-navbar .btn-outline,
+.bg-n7-navbar button {
+  color: var(--color-n7-text);
 }
 
 /* ── Custom scrollbar ─────────────────────────────────────── */
@@ -108,7 +130,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
+  padding: 12px 42px;
   background-color: transparent;
   color: var(--color-n7-text);
   font-family: var(--font-mono);
@@ -117,14 +139,13 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid var(--color-n7-border-light);
+  border: 1px solid var(--color-n7-text-muted);
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-outline:hover {
-  border-color: var(--color-n7-text-muted);
   background-color: rgba(255, 255, 255, 0.03);
   transform: translateY(-1px);
 }

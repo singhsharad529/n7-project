@@ -26,26 +26,25 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        id="main-nav"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-[#08060d]/85 backdrop-blur-[16px] border-b border-n7-border'
-            : 'bg-transparent backdrop-blur-none border-b border-transparent'
-        }`}
+        className={`fixed top-2 left-4 right-4  md:left-40 md:right-40 z-50 transition-all duration-300 rounded-2xl text-n7-text bg-n7-navbar ${scrolled
+          ? ' backdrop-blur-[16px]'
+          : ' '
+          }`}
       >
-        <div className="max-w-[1240px] mx-auto px-8 h-[72px] flex items-center justify-between">
+        <div className="w-full px-20 h-[60px] flex items-center justify-between"
+          style={{
+            padding: '0 1.5rem',
+          }}
+        >
           {/* Logo */}
           <a
-            href="#"
+            href="/"
             id="nav-logo"
             className="flex items-center gap-[2px] no-underline font-heading text-2xl font-bold text-n7-text tracking-[-0.02em]"
           >
-            <svg width="24" height="23" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" fill="#863bff"/>
-            </svg>
             <span>N7</span>
           </a>
 
@@ -67,8 +66,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <a
             href="#request-demo"
-            className="btn-outline hidden md:inline-flex px-[22px] py-2.5 text-[0.75rem]"
-            id="nav-cta"
+            className="btn-outline text-[0.75rem] hidden md:inline-flex border border-n7-light"
           >
             Request Demo
           </a>
