@@ -1,6 +1,6 @@
-# Codeliner Assignment
+# codelinear Assignment
 
-This repository is a frontend assignment from Codeliner created to evaluate frontend development skills, code quality, problem-solving ability, and attention to detail.
+This repository is a frontend assignment from codelinear created to evaluate frontend development skills, code quality, problem-solving ability, and attention to detail.
 
 ---
 
