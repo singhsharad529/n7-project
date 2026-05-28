@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Chivo+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
 
 @theme {
   --color-n7-bg: #08060d;

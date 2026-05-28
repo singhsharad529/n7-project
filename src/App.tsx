@@ -7,6 +7,7 @@ import BankingSection from './components/BankingSection';
 import DigitalSection from './components/DigitalSection';
 import Insights from './components/Insights';
 import Footer from './components/Footer';
+import HelloStrip from './components/HelloStrip';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <TrustedBy />
         <SolutionsSection />
         <BankingSection />
+        <HelloStrip />
         <DigitalSection />
         <Insights />
         <Footer />
