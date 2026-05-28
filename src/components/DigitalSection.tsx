@@ -3,8 +3,6 @@ import iphone1 from '../assets/images/digital/iPhone 13 Pro-1.png';
 import iphone2 from '../assets/images/digital/iPhone-13-Pro-2.png';
 import iphone3 from '../assets/images/digital/iPhone 13 Pro-3.png';
 
-
-import "../assets/css/banking-style.css";
 import LearnMore from './common/LearnMore';
 
 const headingVariants = {
@@ -40,7 +38,7 @@ export default function DigitalSection() {
     return (
         <section
             id="digital"
-            className="bg-n7-bg-secondary pt-[100px] pb-2 relative"
+            className="bg-n7-bg-secondary pt-[100px] pb-20 relative"
         >
             <div className="max-w-[1240px] mx-auto px-8 space-y-20">
                 <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 lg:gap-[100px] items-start justify-between">
@@ -70,7 +68,6 @@ export default function DigitalSection() {
                     <div className="flex flex-col gap-12">
                         <div className="flex flex-col-reverse items-center md:flex-row gap-6 my-2 text-left">
                             <img src={iphone1} alt="iPhone 13 Pro" />
-
                             <div className="text-n7-text-inverted space-y-4">
                                 <h1 className="text-xl">Fully compliant with regulatory requirement</h1>
                                 <p className="text-n7-text-dim">
@@ -99,7 +96,6 @@ export default function DigitalSection() {
                         </div>
                         <div className="flex flex-col-reverse items-center md:flex-row gap-6 my-2 text-left">
                             <img src={iphone3} alt="iPhone 13 Pro" />
-
                             <div className="text-n7-text-inverted space-y-4">
                                 <h1 className="text-xl">No traditional branches</h1>
                                 <p className="text-n7-text-dim">

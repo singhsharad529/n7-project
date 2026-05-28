@@ -5,6 +5,7 @@ import SolutionsSection from './components/SolutionsSection';
 import './App.css';
 import BankingSection from './components/BankingSection';
 import DigitalSection from './components/DigitalSection';
+import Insights from './components/Insights';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <SolutionsSection />
         <BankingSection />
         <DigitalSection />
+        <Insights />
       </main>
     </>
   );
