@@ -95,7 +95,7 @@ function SolutionCard({ item, index }: { item: SolutionItem; index: number }) {
         >
           {item.icon}
         </motion.div>
-        {item.badge && <span className="nbfc-badge">{item.badge}</span>}
+        {item.badge && <span className="text-n7-text-muted">{item.badge}</span>}
       </div>
 
       {/* Title */}

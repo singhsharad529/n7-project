@@ -38,18 +38,29 @@ export default function DigitalSection() {
     return (
         <section
             id="digital"
-            className="bg-n7-bg-secondary pt-[100px] pb-20 relative"
+            className="bg-n7-bg-secondary pt-[100px] pb-20 relative z-50"
         >
             <div className="max-w-[1240px] mx-auto px-8 space-y-20">
-                <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 lg:gap-[100px] items-start justify-between">
+                <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 lg:gap-[100px] items-start justify-between relative">
+                    <span
+                        className="hidden md:block absolute top-[-5%] left-[20%] flex justify-center items-start font-heading text-[32rem] leading-[0.9] tracking-[-0.08em] text-transparent pointer-events-none z-10 overflow-hidden"
+                        style={{
+                            WebkitTextStroke: '1px #003ACE',
+                            maskImage: 'linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)',
+                            WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)',
+                        }}
+                    >
+                        N7
+                    </span>
                     {/* Left: Heading + CTA (sticky on desktop) */}
                     <motion.div
-                        className="solutions-heading lg:sticky lg:top-[120px] text-center lg:text-left"
+                        className="solutions-heading lg:sticky lg:top-[120px] text-center lg:text-left z-10"
                         variants={headingVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
+
                         {/* <span className="banking-watermark">N7</span> */}
                         <h2 className="font-heading text-[clamp(1.75rem,3vw,2.25rem)] font-semibold leading-1.2 tracking-[-0.02em] text-n7-text-inverted mb-8">
                             Digital banking out-of-the-box
@@ -65,7 +76,7 @@ export default function DigitalSection() {
                             <LearnMore href={"#"} index={0} />
                         </div>
                     </motion.div>
-                    <div className="flex flex-col gap-12">
+                    <div className="flex flex-col gap-12 z-10">
                         <div className="flex flex-col-reverse items-center md:flex-row gap-6 my-2 text-left">
                             <img src={iphone1} alt="iPhone 13 Pro" />
                             <div className="text-n7-text-inverted space-y-4">
