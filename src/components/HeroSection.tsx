@@ -6,7 +6,7 @@ import heroRight from '../assets/images/hero/hero-right.png';
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center pt-[72px] overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-[48px] md:pt-[72px] overflow-hidden"
     >
       {/* Background gradient effect */}
       <div className="hero-gradient absolute inset-0 z-0" />

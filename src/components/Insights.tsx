@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import LearnMore from './common/LearnMore';
 import InsightHeroImage from "../assets/images/insights/hero-image.png";
+import InsightsCarousel from './InsightsCarousel';
 
 /* ── Insights card data ───────────────────────────────────── */
 interface InsightItem {
@@ -88,7 +89,7 @@ function InsightsCard({ item, index }: { item: InsightItem; index: number }) {
 
             <div className="text-center">
                 <motion.a
-                    href="#request-demo"
+                    href={item.url}
                     className="btn-outline mx-auto lg:mx-0 inline-flex w-full"
                     id="solutions-cta"
                     whileHover={{ scale: 1.03 }}
@@ -145,33 +146,9 @@ export default function Insights() {
                         </div>
                     </div>
                 </div>
-                <div className="solutions-layout grid grid-cols-1 lg:grid-cols-[440px_1fr] gap-12 lg:gap-[60px] justify-between items-center relative overflow-hidden">
-                    <motion.div
-                        className="solutions-heading relative z-10 text-center lg:text-left"
-                        variants={headingVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="font-heading text-[clamp(1.75rem,3vw,2.25rem)] font-semibold leading-1.2 tracking-[-0.02em] text-n7-text mb-8">
-                            Take the full advantage of going paper-less now.
-                        </h2>
-                        <p className='text-n7-text/80'>CB7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations </p>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                        className="relative z-10 flex items-center gap-4 flex-wrap justify-end"
-                    >
-                        <a href="#contact" className="btn-outline" id="hero-cta-contact">
-                            Contact Us
-                        </a>
-                        <a href="#request-demo" className="btn-primary btn-primary-sm" id="hero-cta-demo">
-                            Request Demo
-                        </a>
-                    </motion.div>
-                </div>
+
+
+                <InsightsCarousel />
             </div>
         </section>
     );

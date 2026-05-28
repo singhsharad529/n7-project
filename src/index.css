@@ -53,6 +53,14 @@ body {
   color: var(--color-n7-text-muted);
 }
 
+.text-n7-accent {
+  color: var(--color-n7-accent);
+}
+
+.text-n7-accent-hover {
+  color: var(--color-n7-accent-hover);
+}
+
 /* Ensure navbar content is white when using the navbar background */
 .bg-n7-navbar .nav-link,
 .bg-n7-navbar #nav-logo,
@@ -121,6 +129,14 @@ body {
 
 .btn-primary:hover::before {
   opacity: 1;
+}
+
+/* ── Gradient text styles ────────────────────────────────── */
+.text-gradient-primary {
+  background: linear-gradient(180deg, #003ACE 0%, #00B4FD 50%, #003ACE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .btn-outline {

@@ -6,6 +6,7 @@ import './App.css';
 import BankingSection from './components/BankingSection';
 import DigitalSection from './components/DigitalSection';
 import Insights from './components/Insights';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <BankingSection />
         <DigitalSection />
         <Insights />
+        <Footer />
       </main>
     </>
   );
